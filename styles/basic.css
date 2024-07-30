@@ -1,0 +1,187 @@
+        @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+        @import url('/font-awesome-4.6.3/css/font-awesome.min.css');
+        body {
+            font-family: Quicksand;
+            line-height: 1.0;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            background-color: #333;
+            background-image: url(images/Background.jpg);
+            cursor: none; /* Hide the default cursor */
+            padding-bottom: 60px;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+
+        header {
+            line-height: 2.0;
+            background-color: #181818;
+            color: #fff;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 1000;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        header h1 {
+            margin: 0;
+            font-weight: 400;
+            font-family: Lumanosimo,;
+        
+        }
+        header h3 {
+            color: #181818;
+        
+        }
+        nav {
+            padding-right: 50px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            padding: 8px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            cursor: none;
+        }
+        nav ul li a span {
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li a:hover {
+            background-color: #444;
+            color: #ddd; /* Slightly darker text color on hover */
+            cursor: none; /* Hide cursor when hovering over the link */
+        }
+
+        nav ul li a.active {
+            background-color: #2b2b2b;
+            color: #ddd; /* Slightly darker text color on hover */
+            cursor: none; /* Hide cursor when hovering over the link */
+        }
+        .first-container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            transition: transform 0.3s ease;
+            position: relative;
+            padding-top: 120px; /* Add padding to account for fixed header */
+        }
+        .first-container:hover {
+            transform: scale(1.025);
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+        
+        .container:hover {
+            transform: scale(1.025);
+        }
+        
+        .intro {
+            line-height: 2.0;
+            background-color: #181818e6;
+            border: 3px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideUpFade 1.5s ease-out forwards;
+            transition: transform 0.3s ease; /* Smooth transition for scaling */
+            font-size: 20px
+        }
+        .text-block {
+            line-height: 1.1;
+            background-color: #181818e6;
+            border: 3px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideUpFade 1.5s ease-out forwards;
+            transition: transform 0.3s ease; /* Smooth transition for scaling */
+            font-size: 20px
+        }
+        .text-block a {
+            text-decoration: none; /* Remove underline */
+            font-weight: bold; /* Make text bold */
+            color: #ffffff; /* Set link color (adjust as needed) */
+        }
+
+        /* Optional: Style for hover state */
+        .text-block a:hover {
+            color: #838383; /* Change color on hover (adjust as needed) */
+            cursor: none;
+        }
+
+
+        @keyframes slideUpFade {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        footer {
+            background-color: #181818;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        #cursor {
+            width: 10px; /* Size of the dot */
+            height: 10px; /* Size of the dot */
+            background-color: #181818; /* Color of the dot */
+            border-radius: 50%; /* Make it a circle */
+            border: 3px solid #ffffff;
+            position: fixed;
+            pointer-events: none; /* Ignore mouse events */
+            z-index: 9999; /* Ensure it is on top */
+            transform: translate(-50%, -50%); /* Center the dot */
+        }
+        /* Responsive design */
+        @media screen and (max-width: 800px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            nav ul {
+                justify-content: center;
+                margin-top: 1rem;
+            }
+            nav ul li {
+                margin: 0 10px;
+            }
+        }
+        canvas { display: block; position: fixed; top: 0; left: 0; z-index: -1; }
