@@ -4,273 +4,40 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sanna is a woman</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
-        @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
-        @import url('/font-awesome-4.6.3/css/font-awesome.min.css');
-        body {
-            font-family: Quicksand;
-            line-height: 2.0;
-            margin: 0;
-            padding: 0;
-            color: #fff;
-            background-color: #333;
-            background-image: url(Images/Background.jpg);
-            cursor: none; /* Hide the default cursor */
-        }
-        header {
-            background-color: #181818;
-            color: #fff;
-            padding: 1rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: 1000;
-        }
-        header h1 {
-            margin: 0;
-            font-weight: 400;
-            font-family: Lumanosimo,;
-        
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin-left: 20px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: #fff;
-            padding: 8px 15px;
-            border-radius: 20px;
-            display: inline-block;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            cursor: none;
-        }
-        nav ul li a span {
-            display: flex;
-            align-items: center;
-        }
+    <title>WeeScottishMan's Website</title>
+    <link rel="stylesheet" href="styles/basic.css">
 
-        nav ul li a:hover {
-            background-color: #444;
-            color: #ddd; /* Slightly darker text color on hover */
-            cursor: none; /* Hide cursor when hovering over the link */
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-            padding: 20px;
-            transition: transform 0.3s ease;
-        }
-        .container:hover {
-            transform: scale(1.05);
-        }
-        .blog-post {
-            background-color: rgba(24, 24, 24, 0.9);
-            border: 3px solid #ddd;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 20px;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: slideUpFade 1.5s ease-out forwards;
-            transition: transform 0.3s ease; /* Smooth transition for scaling */
-        }
-        .blog-post:hover {
-            transform: scale(1.05) translateY(20px); /* Zoom in effect */
-        }
-        @keyframes slideUpFade {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        footer {
-            background-color: #181818;
-            color: #fff;
-            text-align: center;
-            padding: 1rem;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        #cursor {
-            width: 10px; /* Size of the dot */
-            height: 10px; /* Size of the dot */
-            background-color: white; /* Color of the dot */
-            border-radius: 50%; /* Make it a circle */
-            position: fixed;
-            pointer-events: none; /* Ignore mouse events */
-            z-index: 9999; /* Ensure it is on top */
-            transform: translate(-50%, -50%); /* Center the dot */
-        }
-        /* Responsive design */
-        @media screen and (max-width: 800px) {
-            header {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-            nav ul {
-                justify-content: center;
-                margin-top: 1rem;
-            }
-            nav ul li {
-                margin: 0 10px;
-            }
-        }
-        canvas { display: block; position: fixed; top: 0; left: 0; z-index: -1; }
-    </style>
 </head>
 <body>
     <div id="cursor"></div> <!-- Custom cursor dot -->
     <canvas id="particleCanvas"></canvas>
     <header>
-        <h1>WeeScottishMan Blog</h1>
+        <h1>WeeScottishMan</h1>
         <nav>
             <ul>
-                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="#about"><i class="fas fa-question-circle"></i> About</a></li>
-                <li><a href="#blog"><i class="fas fa-comment"></i> Blog</a></li>
-                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                    <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="windows.html"><i class="fa-brands fa-windows"></i> Windows</a></li>
+                    <li><a href="linux.html"><i class="fa-brands fa-linux"></i> Linux</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <div class="container">
         <div class="blog-post">
-            <h2>Welcome to my website UwU</h2>
-            <p>Published on: <em>July 27, 2024</em></p>
-            <p>Welcome to my blog! This is my first post, and I'm excited to share my thoughts and experiences with you. Stay tuned for more content coming soon!</p>
+            <h2><i class="fa-solid fa-globe"></i> Welcome to my website</h2>
+            <p>Welcome to my website here I have a list of useful tool and programs. Some of these programs I use and others I simply have found useful in the past.</p>
+            <p>I made this website myself so let me know if there is any improvements you would recommend.</p>
+            <p><em>Hope you find this useful and thank you ^-^ </em></p>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2024 My Simple Blog. All rights reserved.</p>
+        <p>&copy; 2024 WeeScottishMan's Website. All rights reserved.</p>
     </footer>
 
-    <script>
-        const canvas = document.getElementById('particleCanvas');
-        const ctx = canvas.getContext('2d');
+    <script src="scripts/particles.js"></script>
+    <script src="scripts/cursor.js"></script>
 
-        function resizeCanvas() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
-
-        resizeCanvas(); // Set initial size
-
-        let particles = [];
-        const particleCount = 100;
-        const connectionDistance = 100;
-        const mouseInfluenceDistance = 50;
-        const speedFactor = 0.1; // Adjust this value to change the speed of the particles
-
-        class Particle {
-            constructor() {
-                this.x = Math.random() * canvas.width;
-                this.y = Math.random() * canvas.height;
-                this.size = 2;
-                this.speedX = (Math.random() * 3 - 1.5) * speedFactor;
-                this.speedY = (Math.random() * 3 - 1.5) * speedFactor;
-            }
-
-            update() {
-                this.x += this.speedX;
-                this.y += this.speedY;
-
-                // Keep particles within the canvas boundaries
-                if (this.x > canvas.width || this.x < 0) this.speedX *= -1;
-                if (this.y > canvas.height || this.y < 0) this.speedY *= -1;
-            }
-
-            draw() {
-                ctx.fillStyle = 'white';
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.fill();
-            }
-        }
-
-        function init() {
-            particles = []; // Reset particles
-            for (let i = 0; i < particleCount; i++) {
-                particles.push(new Particle());
-            }
-        }
-
-        function animate() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            
-            for (let a = 0; a < particles.length; a++) {
-                particles[a].update();
-                particles[a].draw();
-                
-                for (let b = a; b < particles.length; b++) {
-                    const dx = particles[a].x - particles[b].x;
-                    const dy = particles[a].y - particles[b].y;
-                    const distance = Math.sqrt(dx * dx + dy * dy);
-                    
-                    if (distance < connectionDistance) {
-                        ctx.strokeStyle = `rgba(255,255,255,${1 - distance/connectionDistance})`;
-                        ctx.lineWidth = 1;
-                        ctx.beginPath();
-                        ctx.moveTo(particles[a].x, particles[a].y);
-                        ctx.lineTo(particles[b].x, particles[b].y);
-                        ctx.stroke();
-                    }
-                }
-            }
-            
-            requestAnimationFrame(animate);
-        }
-
-        canvas.addEventListener('mousemove', (e) => {
-            particles.forEach(particle => {
-                const dx = e.x - particle.x;
-                const dy = e.y - particle.y;
-                const distance = Math.sqrt(dx * dx + dy * dy);
-                if (distance < mouseInfluenceDistance) {
-                    particle.x -= dx * 0.05;
-                    particle.y -= dy * 0.05;
-                }
-            });
-        });
-
-        // Custom cursor
-        const cursor = document.getElementById('cursor');
-
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-        });
-
-        let resizeTimeout;
-        window.addEventListener('resize', () => {
-            resizeCanvas(); // Resize the canvas on window resize
-            clearTimeout(resizeTimeout); // Clear the timeout if resize is still happening
-            resizeTimeout = setTimeout(() => {
-                // Update particle positions based on new canvas size
-                particles.forEach(particle => {
-                    particle.x = Math.random() * canvas.width;
-                    particle.y = Math.random() * canvas.height;
-                });
-            }, 100); // Adjust the timeout duration as needed
-        });
-
-        init();
-        animate();
-    </script>
 </body>
 </html>
