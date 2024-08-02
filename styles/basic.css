@@ -186,3 +186,9 @@
             }
         }
         canvas { display: block; position: fixed; top: 0; left: 0; z-index: -1; }
+
+        @media screen and (max-width: 1200px)       {  
+        header {
+            position: absolute;
+        }
+    }
