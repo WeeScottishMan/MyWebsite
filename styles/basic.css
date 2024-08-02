@@ -19,6 +19,7 @@
             line-height: 2.0;
             background-color: #181818;
             color: #fff;
+            text-shadow: 2px 2px #555555;
             padding: 1rem;
             display: flex;
             justify-content: space-between;
@@ -116,7 +117,7 @@
         .text-block {
             line-height: 1.1;
             background-color: #181818e6;
-            border: 3px solid #ddd;
+            border: 3px solid #dddddd;
             border-radius: 10px;
             padding: 20px;
             margin-bottom: 20px;
@@ -129,7 +130,7 @@
         .text-block a {
             text-decoration: none; /* Remove underline */
             font-weight: bold; /* Make text bold */
-            color: #ffffff; /* Set link color (adjust as needed) */
+            color: #c7fff8; /* Set link color (adjust as needed) */
         }
 
         /* Optional: Style for hover state */
