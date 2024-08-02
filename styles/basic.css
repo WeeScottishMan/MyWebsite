@@ -184,20 +184,20 @@
             nav ul li {
                 margin: 0 10px;
             }
+            header {
+                position: relative;
+                
+            }
+            .first-container {
+                width: 80%;
+                margin: auto;
+                overflow: hidden;
+                padding: 20px;
+                transition: transform 0.3s ease;
+                position: relative;
+            }
+            nav {
+                padding-right: 0px;
+            }
         }
         canvas { display: block; position: fixed; top: 0; left: 0; z-index: -1; }
-
-        @media screen and (max-width: 1200px)       {  
-        header {
-            position: relative;
-            
-        }
-        .first-container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-            padding: 20px;
-            transition: transform 0.3s ease;
-            position: relative;
-        }
-    }
